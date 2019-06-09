@@ -1,0 +1,11 @@
+= Project Euler
+:doctype: book
+:imagesdir: images
+:idprefix:
+:icons: font
+:toc: left
+:math: asciimath
+:stem: asciimath
+ifndef::ebook-format[:leveloffset: 1]
+
+include::src/docs/asciidoc/_content.adoc[]

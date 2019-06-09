@@ -1,0 +1,66 @@
+plugins {
+    // Gradle IDE plugins
+    id 'eclipse'
+    id 'idea'
+
+    // Documentation
+    id 'org.asciidoctor.jvm.convert' version '2.2.0'
+    id 'org.asciidoctor.jvm.epub'    version '2.2.0'
+    id 'org.asciidoctor.jvm.gems'    version '2.2.0'
+    id 'org.asciidoctor.jvm.pdf'     version '2.2.0'
+}
+
+apply plugin: 'java'
+
+repositories {
+    jcenter()
+    maven { url 'http://rubygems-proxy.torquebox.org/releases' }
+}
+
+dependencies {
+    asciidoctorGems 'rubygems:asciimath:1.0.8'
+}
+
+wrapper { gradleVersion = '5.4.1' }
+
+asciidoctorj {
+    modules {
+        diagram.version '1.5.18'
+        epub.version '1.5.0-alpha.9'
+        pdf.version '1.5.0-alpha.17'
+    }
+
+    requires += 'asciimath'
+
+    attributes = [
+        sourcedir: project.sourceSets.main.java.srcDirs[0],
+        'source-highlighter': 'coderay'
+    ]
+}
+
+asciidoctor {
+    dependsOn asciidoctorGemsPrepare
+}
+
+asciidoctorEpub {
+    dependsOn asciidoctorGemsPrepare
+    ebookFormats EPUB3
+
+    attributes += [
+        // Required to place image in project root.
+        'imagesoutdir': '../../../images'
+    ]
+}
+
+asciidoctorPdf {
+    dependsOn asciidoctorGemsPrepare
+
+    attributes += [
+        // Required to place image in project root.
+        'imagesoutdir': 'images'
+    ]
+}
+
+kindlegen {
+    agreeToTermsOfUse = true
+}
