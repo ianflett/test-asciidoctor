@@ -1,16 +1,17 @@
 plugins {
-    // Gradle IDE plugins
+    // Source code
+    id 'java'
+
+    // IDE
     id 'eclipse'
     id 'idea'
 
     // Documentation
-    id 'org.asciidoctor.jvm.convert' version '2.2.0'
-    id 'org.asciidoctor.jvm.epub'    version '2.2.0'
-    id 'org.asciidoctor.jvm.gems'    version '2.2.0'
-    id 'org.asciidoctor.jvm.pdf'     version '2.2.0'
+    id 'org.asciidoctor.jvm.convert' version '3.0.0-alpha.2'
+    id 'org.asciidoctor.jvm.epub'    version '3.0.0-alpha.2'
+    id 'org.asciidoctor.jvm.gems'    version '3.0.0-alpha.2'
+    id 'org.asciidoctor.jvm.pdf'     version '3.0.0-alpha.2'
 }
-
-apply plugin: 'java'
 
 repositories {
     jcenter()
@@ -30,7 +31,7 @@ asciidoctorj {
         pdf.version '1.5.0-alpha.17'
     }
 
-    requires += 'asciimath'
+    requires 'asciimath'
 
     attributes = [
         sourcedir: project.sourceSets.main.java.srcDirs[0],
@@ -46,19 +47,14 @@ asciidoctorEpub {
     dependsOn asciidoctorGemsPrepare
     ebookFormats EPUB3
 
-    attributes += [
-        // Required to place image in project root.
-        'imagesoutdir': '../../../images'
+    attributes = [
+        'data-uri': file("$buildDir/tmp/asciidoctorEpub/images"),
+        imagesoutdir: file("$buildDir/tmp/asciidoctorEpub/images")
     ]
 }
 
 asciidoctorPdf {
     dependsOn asciidoctorGemsPrepare
-
-    attributes += [
-        // Required to place image in project root.
-        'imagesoutdir': 'images'
-    ]
 }
 
 kindlegen {

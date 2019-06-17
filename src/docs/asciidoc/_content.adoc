@@ -4,7 +4,7 @@ ifndef::sourcedir[:sourcedir: ../../main/java]
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis consectetur risus. Praesent in erat orci. Etiam dignissim feugiat quam id facilisis. Phasellus vitae dolor bibendum, tristique ipsum aliquam, feugiat magna. In at viverra massa, ac mollis nulla. Nunc sollicitudin, odio nec commodo cursus, mi dui condimentum nisi, nec mollis purus lectus sit amet libero. Ut risus libero, cursus vel ultrices id, ornare nec arcu. Integer non auctor dolor. Nunc dapibus metus elementum libero aliquet suscipit. Duis suscipit feugiat nisi ac tincidunt.
 
-asciimath:[y = mx + c]
+stem:[y = mx + c]
 
 Integer aliquam felis dui, at dapibus leo vestibulum sed. Aenean sed molestie ipsum, vitae placerat nibh. Maecenas posuere in eros eu varius. Praesent a venenatis dui, sed ornare quam. Mauris vel mi est. Vestibulum eu convallis arcu. Vivamus nunc libero, tristique consequat vestibulum a, semper fermentum lectus. Phasellus faucibus quam ut vestibulum volutpat. Sed porttitor accumsan suscipit. Vivamus lacinia, eros vitae vestibulum ultricies, orci mauris laoreet lorem, quis scelerisque ante mauris vel lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut porta feugiat justo, ac imperdiet diam luctus sit amet. Pellentesque vel cursus enim.
 
@@ -30,7 +30,7 @@ Integer aliquam felis dui, at dapibus leo vestibulum sed. Aenean sed molestie ip
 
 In cursus tempor velit, a laoreet odio maximus eget. Nunc maximus sem sit amet orci sodales condimentum. Etiam maximus fermentum nisi et tincidunt. Donec tortor sapien, tincidunt sit amet interdum quis, tincidunt vitae lorem. Praesent finibus, turpis nec sollicitudin finibus, nibh nibh gravida eros, a congue sem neque eu lacus. Nullam blandit ligula non lectus pharetra, id viverra leo ultrices. Nullam sagittis vehicula ligula nec interdum.
 
-asciimath:[e = mc^2]
+stem:[e = mc^2]
 
 Sed iaculis lacus in accumsan interdum. Praesent id bibendum nibh. Nullam hendrerit, nisi ac pharetra blandit, lectus purus euismod dolor, sit amet vehicula erat quam sed metus. Vivamus ac sem at massa fermentum blandit sit amet eget turpis. Morbi iaculis metus in dui efficitur, eu aliquam libero vehicula. Cras vitae tortor diam. Pellentesque vulputate elit volutpat hendrerit mollis. Nunc venenatis venenatis nunc a pharetra. Aenean ut velit leo. Mauris interdum eu libero imperdiet aliquam. Donec tincidunt auctor iaculis. Pellentesque et feugiat nisl. Donec eu augue quis arcu tincidunt accumsan.
 
